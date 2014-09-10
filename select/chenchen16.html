@@ -1,0 +1,82 @@
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<style>
+p{
+	width:600px;
+	height:20px;
+	color:black;
+}
+
+div{
+	border:1px solid red;
+}
+
+p[class^="test"]{
+	background:#ffff00;
+}
+
+p[class*="aaaaa"]{
+	background:red;
+}
+
+
+
+input[type="text"]:enabled{
+background:#ffff00;
+}
+input[type="text"]:disabled{
+background:#dddddd;
+}
+
+a[target=_blank]{
+	color:green;
+}
+
+[title~=flower]{
+	color:yellow;
+}
+a[lang|=en]{
+	color:#f53923;
+}
+
+
+</style>
+
+
+<h2>[class^="test"]</h2>
+
+<div class="test"> 
+	<p class="test123">aaaaaaaaaa</p>
+	<p class="test4aaaaa">b  bbbbbbbbbb</p>
+	<p class="testfdsfs">cccccccccccccc</p>
+</div>
+<p>class为公共属性的时候，可以使用，比如我们之前有一个 commonbutton的class定义了常用的样式，比如边框样式，圆角等等</p>
+<p>用另外一个class来的控制渐变，颜色区分不同，如果使用了该选择器，就是可以启用类似base-XXXXX,^base-来设置基本属性，不用定义额外的class</p>
+<p>如果有其他的按钮需要集成这个基础样式，我们可以通过集成这个命名来实现</p>
+<p>注释：对于 IE7/IE8 及更早版本中的 [attribute^=value] 都是支持的</p>
+<p>[class$="test"] //以XXX结束</p>
+<p>[class*="abc"] //包含XXX的</p>
+
+
+
+<h2>input[type="text"]:enabled</h2>
+<h2>input[type="text"]:disabled</h2>
+<form action="">
+First name: <input type="text" value="Mickey" /><br>
+Last name: <input type="text" value="Mouse" /><br>
+Country: <input type="text" disabled="disabled" value="Disneyland" /><br>
+</form>
+<p>所有主流浏览器均支持 :enabled 选择器，除了 IE8 及更早的版本。</p>
+
+
+
+<h2>a[target]</h2>
+<h2>a[target=_blank] 选择 target 属性等于 "_blank" 的元素</h2>
+<h2>[title~=flower] 选择 titile 属性包含单词 "flower" 的元素</h2>
+<h2>[lang|=en] 选择 lang 属性值以 "en" 开头的元素</h2>
+
+<a href="javascript:(0)">我是不带target的a标签</a>
+<a href="javascript:(0)" target="_blank">我是带target的a标签</a>
+<a href="javascript:(0)" title="aaaaaaa flower">我的title是flower</a>
+<a href="javascript:(0)" lang="enfds" title="aaaaaaaflower">我的title是flower</a>
+
