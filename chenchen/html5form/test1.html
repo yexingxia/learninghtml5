@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<meta charset="utf-8" />
+
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp" method="get">
+Webpage: <input type="url" list="url_list" name="link" />
+<datalist id="url_list">r
+	<option label="W3School" value="http://www.w3school.com.cn" />
+	<option label="Google" value="http://www.google.com" />
+	<option label="Microsoft" value="http://www.microsoft.com" />
+</datalist>
+<input type="submit" />
+</form>
+option可以输入值
+
+<hr>
+
+<form action="/example/html5/demo_form.asp" method="get" autocomplete="on">
+First name:<input type="text" name="fname" /><br />
+Last name: <input type="text" name="lname" /><br />
+E-mail: <input type="email" name="email" autocomplete="off" /><br />
+<input type="submit" />
+</form>
+
+<p>请填写并提交此表单，然后重载页面，来查看自动完成功能是如何工作的。</p>
+<p>请注意，表单的自动完成功能是打开的，而 e-mail 域是关闭的。</p>
+
+<hr>
+
+<form action="/example/html5/demo_form.asp" method="get">
+User name: <input type="text" name="user_name" autofocus="autofocus" />
+<input type="submit" />
+</form>
+
+<p>自动焦点。</p>
+
+<hr>
+<form action="/example/html5/demo_form.asp" method="get" id="user_form">
+First name:<input type="text" name="fname" />
+<input type="submit" />
+</form>
+
+<p>下面的输入域在 form 元素之外，但仍然是表单的一部分。</p>
+
+Last name: <input type="text" name="lname" form="user_form" />
+
+<hr>
+
+
+边界值和步长
+<form action="/example/html5/demo_form.asp" method="get">
+Points: <input type="number" name="points" min="0" max="10" step="3"/>
+<input type="submit" />
+</form>
+
+<hr>
+
+<form action="/example/html5/demo_form.asp" method="get">
+Select images: <input type="file" name="img"  />
+<input type="submit" />
+</form>
+
+<p>当您浏览文件时，请试着选择多个文件。</p>
+
+<hr>
+
+<form action="/example/html5/demo_form.asp" method="get" novalidate="novalidate">
+E-mail: <input type="email" name="user_email" />
+<input type="submit" />
+novalidate 不做标签校验
+
+</form>
+<hr>
+
+
+<form action="/example/html5/demo_form.asp" method="get">
+Country code: <input type="text" name="country_code" pattern="[A-z]{3}"
+title="Three letter country code" />
+<input type="submit" />
+</form>
+input框框适应正则表达式
+
+<hr>
+
+<form action="/example/html5/demo_form.asp" method="get">
+<input type="search" name="user_search" placeholder="Search W3School" />
+<input type="submit" />
+</form>
+期待值 或者缺省值
+<hr>
+
+
+<form action="/example/html5/demo_form.asp" method="get">
+Name: <input type="text" name="usr_name" required="required" />
+<input type="submit" />
+</form>
+非空验证
+<hr>
+
+
+<form action="/example/html5/demo_form.asp" method="get">
+Username: <input type="text" name="usr_name" />
+Encryption: <keygen name="security" />
+<input type="submit" />
+</form>
+
+加密验证
+
+</body>
+</html>
+
+
+
